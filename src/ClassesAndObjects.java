@@ -3,14 +3,22 @@ public class ClassesAndObjects {
         Person person1 = new Person();
         person1.name = "Roman";
         person1.age = 50;
-        System.out.println("My name is " + person1.name + ", " + person1.age + " old.");
+        person1.speak();
         Person person2 = new Person();
         person2.name = "Mike";
         person2.age = 20;
-        System.out.println("My name is " + person2.name + ", " + person2.age + " years.");
+        person2.sayHallo();
     }
 }
 class Person{
     String name;
     int age;
+    void speak(){
+        for(int i = 0; i < 3; i++){
+        System.out.println("My name " + name + ", " + age + " age.");
+        }
+    }
+    void sayHallo(){
+        System.out.println("Hallo!");
+    }
 }
