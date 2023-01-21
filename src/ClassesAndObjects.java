@@ -1,8 +1,9 @@
 public class ClassesAndObjects {
     public static void main(String[] args){
         Person person1 = new Person();
-        person1.name = "Roman";
+        person1.setName("Roman");
         person1.age = 50;
+        String s1 = "Roman";
         person1.speak();
         int year1 = person1.calculateYearsToRetirement();
         Person person2 = new Person();
@@ -18,6 +19,9 @@ public class ClassesAndObjects {
 class Person{
     String name;
     int age;
+    void setName(String userName){
+        name = userName;
+    }
     int calculateYearsToRetirement(){
         int year = 65 - age;
         return year;
