@@ -1,28 +1,33 @@
 public class ClassesAndObjects {
     public static void main(String[] args){
         Person person1 = new Person();
-        person1.name = "Roman";
-        person1.age = 50;
+        person1.setAge(17);
+        person1.setName("Roman");
+        System.out.println("Output the value in the main method: " + person1.getName() + ".");
+        System.out.println("Output the value in the main method: " + person1.getAge() + ".");
+        person1.sayHallo();
         person1.speak();
-        int year1 = person1.calculateYearsToRetirement();
-        Person person2 = new Person();
-        person2.name = "Mike";
-        person2.age = 20;
-        person2.sayHallo();
-        int year2 = person2.calculateYearsToRetirement();
-        System.out.println("Until retirement is left " + year1 + " and " + year2);
-
-
     }
 }
 class Person{
-    String name;
-    int age;
-    int calculateYearsToRetirement(){
-        int year = 65 - age;
-        return year;
-//        System.out.println("Until retirement is left " + years);
+    private String name;
+    private int age;
+
+    public void setName(String username){
+        name = username;
     }
+    public String getName(){
+        return name;
+    }
+
+    public void setAge(int userAge) {
+        age = userAge;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     void speak(){
         for(int i = 0; i < 3; i++){
         System.out.println("My name " + name + ", " + age + " age.");
